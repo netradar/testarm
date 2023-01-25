@@ -34,6 +34,7 @@ int main(int, char**) {
     Base &b = s;
 
     b.vf();
+    cout << "hello" <<endl;
 
 
 
