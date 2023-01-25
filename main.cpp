@@ -36,6 +36,7 @@ int main(int, char**) {
     b.vf();
     cout << "hello" <<endl;// this line is added by others
 
+    cout << " I am here\n";
 
 
 }
