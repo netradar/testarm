@@ -34,7 +34,7 @@ int main(int, char**) {
     Base &b = s;
 
     b.vf();
-    cout << "hello" <<endl;
+    cout << "hello" <<endl;// this line is added by others
 
 
 
