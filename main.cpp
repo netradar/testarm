@@ -38,5 +38,10 @@ int main(int, char**) {
 
     cout << "lichao1\n";
 
+    cout << " I am again here\n";
+
+    cout << " I am not here\n";
+
+//hello world 1 2
 
 }
