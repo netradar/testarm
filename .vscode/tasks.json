@@ -1,0 +1,56 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build my own arm",
+			"type": "shell",
+			"options": {
+				"cwd": "${workspaceFolder}/build"
+			},
+			"command": "./build.sh",
+			//"args": ["${input:build-config}"],
+			"problemMatcher":
+				{
+					"pattern":{
+						"regexp": "error",
+						"file": 1,
+						"location": 2,
+						"message": 3
+					}
+				},
+			"group": "build"
+		},
+		{
+			"label": "deploy to the board",
+			"type": "shell",
+			"options": {
+				"cwd": "${workspaceFolder}/build"
+			},
+			"command": "./test.sh",
+			//"args": ["${input:build-config}"],
+			"problemMatcher":
+				{
+
+					"pattern":{
+						"regexp": ".*",
+						"file": 1,
+						"location": 2,
+						"message": 3
+					}
+				},
+			"group": "build",
+			"dependsOn":["Build my own arm"]
+		}
+		
+	],
+	"inputs": [
+        {
+            "id": "build-config",
+            "description": "Select a configuration",
+            "default": "Debug",
+            "type": "pickString",
+            "options": ["Debug", "Release", "MinSizeRel", "lichao"]
+        },
+
+    ]
+}
